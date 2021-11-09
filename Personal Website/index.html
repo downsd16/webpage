@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Devin Downs - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="media/favicon16x16.png" sizes="16x16"/>
+    <link rel="shortcut icon" type="image/png" href="media/favicon32x32.png" sizes="32x32"/>
+    <link rel="shortcut icon" type="image/png" href="media/favicon96x96.png" sizes="96x96"/>
+
+    <script type="text/javascript">
+        var open = false;
+
+        //Logic for Nav Bar Movement
+        function toggleNav() {
+            var pixels = (open) ? "0px" : "250px";
+            var items = document.getElementsByClassName("body");
+
+            document.getElementById("mySidenav").style.width = pixels;
+            for (var i = 0; i < items.length; i++) { items[i].style.marginLeft = pixels; }
+
+            open = !open;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="index.html">HOME</a>
+        <a href="pages/projects.html">PROJECTS</a>
+        <a href="pages/education.html">EDUCATION</a>
+        <a href="pages/experience.html">EXPERIENCE</a>
+        <a href="pages/about.html">ABOUT</a>
+    </div>
+
+    <div id="main" class="body">
+        <span id="navtoggle" onclick="toggleNav()">&#9776;</span>
+        <span style="font-size: 40px;margin-left:16px;margin-right:auto">C:/DEVIN_DOWNS/HOME</span>
+    </div>
+
+    <div id="main2" class="body">
+        <span class="circleBig">
+            <a id="circle1" class="circleSmall" href="pages/projects.html">
+                <p class="circleWord" id="circleExp">Experience</p>
+            </a>
+            <a id="circle2" class="circleSmall" href="pages/experience.html">
+                <p class="circleWord" id="circleAb">About</p>
+            </a>
+            <a id="circle3" class="circleSmall" href="pages/education.html">
+                <p class="circleWord" id="circleEdu">Education</p>
+            </a>
+            <a id="circle4" class="circleSmall" href="pages/about.html">
+                <p class="circleWord" id="circleProj">Projects</p>
+            </a>
+        </span>
+
+    </div>
+
+</body>
+
+</html>
